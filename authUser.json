@@ -1,0 +1,11 @@
+{
+    "username": "Admin",
+    "password": "12345",
+    "photo": "https://www.5.ua/media/pictures/820x546/191706.jpg?t=1597754403",
+    "location": "Dnipro",
+    "gender": "Male",
+    "age": 30,
+    "occupation": "Software Developer",
+    "additionalInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius odio nec lacus ultricies, vel laoreet justo venenatis."
+}
+
