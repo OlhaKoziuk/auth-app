@@ -5,7 +5,8 @@
     "location": "Dnipro",
     "gender": "Male",
     "age": 30,
-    "occupation": "Software Developer",
+    "position": "Software Developer",
+    "phone": "+380671234569",
     "additionalInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius odio nec lacus ultricies, vel laoreet justo venenatis."
 }
 

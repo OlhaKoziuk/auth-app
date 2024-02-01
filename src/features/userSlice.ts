@@ -6,6 +6,7 @@ interface UserState {
   user: User | null;
   username: string;
   password: string;
+  isAuthorizated: boolean;
   status: "idle" | "loading" | "failed";
 }
 
@@ -13,6 +14,7 @@ const initialState: UserState = {
   user: null,
   username: "",
   password: "",
+  isAuthorizated: false,
   status: "idle",
 };
 
@@ -32,6 +34,9 @@ export const userSlice = createSlice({
       state.username = username;
       state.password = password;
     },
+    setIsAuthorizated: (state, action) => {
+      state.isAuthorizated = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -45,13 +50,14 @@ export const userSlice = createSlice({
       .addCase(getAuthUser.rejected, (state) => {
         state.status = "failed";
       });
-    },
+  },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, setIsAuthorizated } = userSlice.actions;
 
 export const login = (state: RootState) => state.user.username;
 export const password = (state: RootState) => state.user.password;
 export const userData = (state: RootState) => state.user.user;
+export const isAuthorizated = (state: RootState) => state.user.isAuthorizated;
 
 export default userSlice.reducer;

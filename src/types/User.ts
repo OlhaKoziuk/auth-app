@@ -5,6 +5,7 @@ export interface User {
   location: string;
   gender: string;
   age: number;
-  occupation: string;
+  position: string;
+  phone: string;
   additionalInfo: string;
 }
